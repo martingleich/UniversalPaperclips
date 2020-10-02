@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>CS8617; CS8614; CS8620; CS8603; CS8605; CS8602; CS8600; CS8604; CS8625</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UniversalPaperclip\UniversalPaperclip.csproj" />
+  </ItemGroup>
+
+</Project>
