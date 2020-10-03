@@ -7,7 +7,7 @@ namespace UniversalPaperclipUI
 	public partial class SettingsUI : Form
 	{
 		private readonly int BasePower = 10;
-		private readonly int MaxPower = 6;
+		private readonly int MaxPower = 5;
 		private readonly int Resolution = 10;
 
 		public Action<IAutomaticPlayer> SetPlayer { get; }
