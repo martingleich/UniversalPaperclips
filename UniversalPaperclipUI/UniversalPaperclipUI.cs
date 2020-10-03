@@ -61,18 +61,18 @@ namespace UniversalPaperclipUI
 			};
 		}
 
+		private VisibleState? State;
 		private void TimerTick(object sender, EventArgs e)
 		{
-			VisibleState? state = null;
 			for (int i = 0; i < Timer.Interval * SettingsOwner.CurrentSettings.SpeedFactor; ++i)
 			{
 				var nextAction = QueuedActions.DequeOrDefault(UserAction.None);
-				if (nextAction == UserAction.None && state != null)
-					nextAction = SettingsOwner.CurrentSettings.AutoPlayer.NextStep(state);
-				state = Game.Tick(nextAction);
+				if (nextAction == UserAction.None && State != null)
+					nextAction = SettingsOwner.CurrentSettings.AutoPlayer.NextStep(State);
+				State = Game.Tick(nextAction);
 			}
-			if (state != null)
-				RefreshUI(state);
+			if (State != null)
+				RefreshUI(State);
 		}
 
 		private void ButtonSettings_Click(object sender, EventArgs e)
