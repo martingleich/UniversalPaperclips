@@ -10,9 +10,9 @@ namespace UniversalPaperclipUI
 		private readonly Game Game = new Game(0);
 		private readonly Action<VisibleState> RefreshUI;
 		private readonly CircularBuffer<UserAction> QueuedActions = new CircularBuffer<UserAction>(5);
-
-		private readonly AutomaticPlayer? player = new AutomaticPlayer(); // Set to null to disable player.
-		private const int SpeedFactor = 100000;
+		private readonly SettingsOwner SettingsOwner = new SettingsOwner(ImmutableArray.Create(
+			NoneAutomaticPlayer.Description,
+			AutomaticPlayer.Description));
 
 		public UniversalPaperclipsUI()
 		{
@@ -64,15 +64,20 @@ namespace UniversalPaperclipUI
 		private void TimerTick(object sender, EventArgs e)
 		{
 			VisibleState? state = null;
-			for (int i = 0; i < Timer.Interval * SpeedFactor; ++i)
+			for (int i = 0; i < Timer.Interval * SettingsOwner.CurrentSettings.SpeedFactor; ++i)
 			{
 				var nextAction = QueuedActions.DequeOrDefault(UserAction.None);
-				if (nextAction == UserAction.None && player != null && state != null)
-					nextAction = player.NextStep(state);
+				if (nextAction == UserAction.None && state != null)
+					nextAction = SettingsOwner.CurrentSettings.AutoPlayer.NextStep(state);
 				state = Game.Tick(nextAction);
 			}
 			if (state != null)
 				RefreshUI(state);
+		}
+
+		private void ButtonSettings_Click(object sender, EventArgs e)
+		{
+			SettingsOwner.ShowDialog(this);
 		}
 	}
 }

@@ -1,4 +1,6 @@
-﻿namespace UniversalPaperclipUI
+﻿using UniversalPaperclipUI.Properties;
+
+namespace UniversalPaperclipUI
 {
 	partial class UniversalPaperclipsUI
 	{
@@ -29,9 +31,10 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UniversalPaperclipsUI));
 			this.LabelPaperclips = new System.Windows.Forms.Label();
 			this.ButtonMakePaperclip = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.GroupBusiness = new System.Windows.Forms.GroupBox();
 			this.ButtonMarketing = new System.Windows.Forms.Button();
 			this.LabelMarketingLevel = new System.Windows.Forms.Label();
 			this.LabelMarketingCost = new System.Windows.Forms.Label();
@@ -41,7 +44,7 @@
 			this.LabelPricePerClip = new System.Windows.Forms.Label();
 			this.LabelUnsoldInventory = new System.Windows.Forms.Label();
 			this.LabelAvailableFunds = new System.Windows.Forms.Label();
-			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.GroupManufactoring = new System.Windows.Forms.GroupBox();
 			this.LabelCostAutoClippers = new System.Windows.Forms.Label();
 			this.LabelAutoClippers = new System.Windows.Forms.Label();
 			this.ButtonAutoClippers = new System.Windows.Forms.Button();
@@ -49,8 +52,9 @@
 			this.ButtonWire = new System.Windows.Forms.Button();
 			this.LabelWire = new System.Windows.Forms.Label();
 			this.Timer = new System.Windows.Forms.Timer(this.components);
-			this.groupBox1.SuspendLayout();
-			this.groupBox2.SuspendLayout();
+			this.ButtonSettings = new System.Windows.Forms.Button();
+			this.GroupBusiness.SuspendLayout();
+			this.GroupManufactoring.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// LabelPaperclips
@@ -72,26 +76,26 @@
 			this.ButtonMakePaperclip.Text = "Make Paperclip";
 			this.ButtonMakePaperclip.UseVisualStyleBackColor = true;
 			// 
-			// groupBox1
+			// GroupBusiness
 			// 
-			this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.GroupBusiness.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox1.Controls.Add(this.ButtonMarketing);
-			this.groupBox1.Controls.Add(this.LabelMarketingLevel);
-			this.groupBox1.Controls.Add(this.LabelMarketingCost);
-			this.groupBox1.Controls.Add(this.LabelPublicDemand);
-			this.groupBox1.Controls.Add(this.ButtonRaise);
-			this.groupBox1.Controls.Add(this.ButtonLower);
-			this.groupBox1.Controls.Add(this.LabelPricePerClip);
-			this.groupBox1.Controls.Add(this.LabelUnsoldInventory);
-			this.groupBox1.Controls.Add(this.LabelAvailableFunds);
-			this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.groupBox1.Location = new System.Drawing.Point(12, 66);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(285, 171);
-			this.groupBox1.TabIndex = 2;
-			this.groupBox1.TabStop = false;
-			this.groupBox1.Text = "Business";
+			this.GroupBusiness.Controls.Add(this.ButtonMarketing);
+			this.GroupBusiness.Controls.Add(this.LabelMarketingLevel);
+			this.GroupBusiness.Controls.Add(this.LabelMarketingCost);
+			this.GroupBusiness.Controls.Add(this.LabelPublicDemand);
+			this.GroupBusiness.Controls.Add(this.ButtonRaise);
+			this.GroupBusiness.Controls.Add(this.ButtonLower);
+			this.GroupBusiness.Controls.Add(this.LabelPricePerClip);
+			this.GroupBusiness.Controls.Add(this.LabelUnsoldInventory);
+			this.GroupBusiness.Controls.Add(this.LabelAvailableFunds);
+			this.GroupBusiness.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.GroupBusiness.Location = new System.Drawing.Point(12, 66);
+			this.GroupBusiness.Name = "GroupBusiness";
+			this.GroupBusiness.Size = new System.Drawing.Size(285, 171);
+			this.GroupBusiness.TabIndex = 2;
+			this.GroupBusiness.TabStop = false;
+			this.GroupBusiness.Text = "Business";
 			// 
 			// ButtonMarketing
 			// 
@@ -183,23 +187,23 @@
 			this.LabelAvailableFunds.TabIndex = 0;
 			this.LabelAvailableFunds.Text = "Available Funds: {0}";
 			// 
-			// groupBox2
+			// GroupManufactoring
 			// 
-			this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.GroupManufactoring.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.groupBox2.Controls.Add(this.LabelCostAutoClippers);
-			this.groupBox2.Controls.Add(this.LabelAutoClippers);
-			this.groupBox2.Controls.Add(this.ButtonAutoClippers);
-			this.groupBox2.Controls.Add(this.LabelWireCost);
-			this.groupBox2.Controls.Add(this.ButtonWire);
-			this.groupBox2.Controls.Add(this.LabelWire);
-			this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-			this.groupBox2.Location = new System.Drawing.Point(12, 243);
-			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(285, 133);
-			this.groupBox2.TabIndex = 3;
-			this.groupBox2.TabStop = false;
-			this.groupBox2.Text = "Manufacturing";
+			this.GroupManufactoring.Controls.Add(this.LabelCostAutoClippers);
+			this.GroupManufactoring.Controls.Add(this.LabelAutoClippers);
+			this.GroupManufactoring.Controls.Add(this.ButtonAutoClippers);
+			this.GroupManufactoring.Controls.Add(this.LabelWireCost);
+			this.GroupManufactoring.Controls.Add(this.ButtonWire);
+			this.GroupManufactoring.Controls.Add(this.LabelWire);
+			this.GroupManufactoring.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+			this.GroupManufactoring.Location = new System.Drawing.Point(12, 243);
+			this.GroupManufactoring.Name = "GroupManufactoring";
+			this.GroupManufactoring.Size = new System.Drawing.Size(285, 133);
+			this.GroupManufactoring.TabIndex = 3;
+			this.GroupManufactoring.TabStop = false;
+			this.GroupManufactoring.Text = "Manufacturing";
 			// 
 			// LabelCostAutoClippers
 			// 
@@ -267,22 +271,35 @@
 			this.Timer.Interval = 10;
 			this.Timer.Tick += new System.EventHandler(this.TimerTick);
 			// 
+			// ButtonSettings
+			// 
+			this.ButtonSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.ButtonSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ButtonSettings.BackgroundImage")));
+			this.ButtonSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ButtonSettings.Location = new System.Drawing.Point(265, 12);
+			this.ButtonSettings.Name = "ButtonSettings";
+			this.ButtonSettings.Size = new System.Drawing.Size(32, 32);
+			this.ButtonSettings.TabIndex = 4;
+			this.ButtonSettings.UseVisualStyleBackColor = true;
+			this.ButtonSettings.Click += new System.EventHandler(this.ButtonSettings_Click);
+			// 
 			// UniversalPaperclipsUI
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(309, 386);
-			this.Controls.Add(this.groupBox2);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.ButtonSettings);
+			this.Controls.Add(this.GroupManufactoring);
+			this.Controls.Add(this.GroupBusiness);
 			this.Controls.Add(this.ButtonMakePaperclip);
 			this.Controls.Add(this.LabelPaperclips);
 			this.MinimumSize = new System.Drawing.Size(325, 425);
 			this.Name = "UniversalPaperclipsUI";
 			this.Text = "Universal Paperclips";
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
-			this.groupBox2.ResumeLayout(false);
-			this.groupBox2.PerformLayout();
+			this.GroupBusiness.ResumeLayout(false);
+			this.GroupBusiness.PerformLayout();
+			this.GroupManufactoring.ResumeLayout(false);
+			this.GroupManufactoring.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -292,14 +309,14 @@
 
 		private System.Windows.Forms.Label LabelPaperclips;
 		private System.Windows.Forms.Button ButtonMakePaperclip;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox GroupBusiness;
 		private System.Windows.Forms.Button ButtonLower;
 		private System.Windows.Forms.Label LabelPricePerClip;
 		private System.Windows.Forms.Label LabelUnsoldInventory;
 		private System.Windows.Forms.Label LabelAvailableFunds;
 		private System.Windows.Forms.Label LabelPublicDemand;
 		private System.Windows.Forms.Button ButtonRaise;
-		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.GroupBox GroupManufactoring;
 		private System.Windows.Forms.Label LabelCostAutoClippers;
 		private System.Windows.Forms.Label LabelAutoClippers;
 		private System.Windows.Forms.Button ButtonAutoClippers;
@@ -310,6 +327,7 @@
 		private System.Windows.Forms.Button ButtonMarketing;
 		private System.Windows.Forms.Label LabelMarketingLevel;
 		private System.Windows.Forms.Label LabelMarketingCost;
+		private System.Windows.Forms.Button ButtonSettings;
 	}
 }
 
